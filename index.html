@@ -1,9 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="toba.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="content_wrap">
+      <section class="hero">
+        <span class="pill"
+          ><span class="dot"></span>🥳 Now supporting 50+ integrations</span
+        >
+        <h1>
+          <span>
+            <img
+              src="./Assets/Frame 1372286887.svg"
+              alt=""
+              srcset=""
+              class="character-2"
+            />
+            <img />
+            Work smarter with </span
+          ><br />
+          <span class="hero_title_span"
+            >Collaborative
+            <img src="./Assets/Frame 1372286886.svg" alt="" srcset="" />
+          </span>
+          Power
+        </h1>
+        <p>
+          Bring your projects, people, and decisions into one place. Plan
+          better, move faster, and keep everyone in sync.
+        </p>
+
+        <button class="btn" href="#">Get Started</button>
+      </section>
+
+      <!-- DARK: Steps -->
+      <section class="dark">
+        <h3 class="white">Get Started in Minutes</h3>
+        <p class="sub">
+          No heavy setup. Connect tools, invite your team, and you’re good to
+          go.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="number_div">1</div>
+            <h5 class="white">Create Workspaces</h5>
+            <p class="grey_text_blackBG">
+              Spin up spaces for projects and keep work organized by team.
+            </p>
+          </div>
+          <div class="step">
+            <div class="number_div">2</div>
+            <h5 class="white">Collaborate in Real‑time</h5>
+            <p class="grey_text_blackBG">
+              Comments, mentions, and live presence so no one is out of the
+              loop.
+            </p>
+          </div>
+          <div class="step">
+            <div class="number_div">3</div>
+            <h5 class="white">Start Delivering</h5>
+            <p class="grey_text_blackBG">
+              Use templates and automations to move from idea to shipped fast.
+            </p>
+          </div>
+        </div>
+        <button
+          class="btn ghost"
+          href="#"
+          style="background-color: whitesmoke; color: black"
+        >
+          View Demo
+        </button>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features">
+        <h3 class="eyebrow">Built for Modern Teams</h3>
+        <p>Everything you need to plan, track, and ship work</p>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="illus" aria-hidden="true">
+              <img
+                src="./Assets/rafiki.svg"
+                alt=""
+                srcset=""
+                class="illustration"
+              />
+            </div>
+            <h5>Real-Time Chat</h5>
+            <p class="grey_text">
+              Discuss work where it happens and keep context right in the
+              thread.
+            </p>
+          </article>
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="illus" aria-hidden="true">
+              <img
+                src="./Assets/grid_2.svg"
+                alt=""
+                srcset=""
+                class="illustration"
+              />
+            </div>
+            <h5>Smart File Sharing</h5>
+            <p class="grey_text">
+              Share docs and designs with access controls that just make sense.
+            </p>
+          </article>
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="illus" aria-hidden="true">
+              <img
+                src="./Assets/grid_3.svg"
+                alt=""
+                srcset=""
+                class="illustration"
+              />
+            </div>
+            <h5>Task Management</h5>
+            <p class="grey_text">
+              Plan sprints, assign owners, and hit your deadlines without fuss.
+            </p>
+          </article>
+        </div>
+        <button class="btn" href="#">Get Started</button>
+      </section>
+
+      <!-- DARK: CTA -->
+      <section class="BG_image_section">
+        <h3 class="white">Ready to Transform Your Team?</h3>
+        <p class="grey_text_blackBG">
+          Join over 10,000 teams who've already made the switch to smarter
+          collaboration
+        </p>
+        <!-- <div class="stats">
+          <div class="stat">
+            <h4 class="white">10K+</h4>
+            <p class="ratings_text">Active teams</p>
+          </div>
+
+          <div class="stat">
+            <h4 class="white">99.9%</h4>
+            <p class="ratings_text">uptime</p>
+          </div>
+        </div> -->
+        <div class="actions">
+          <button
+            class="btn ghost"
+            href="#"
+            style="background-color: whitesmoke; color: black"
+          >
+            View Demo
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Select all the sections and buttons
+      const sections = document.querySelectorAll("section");
+      const buttons = document.querySelectorAll("section button");
+
+      // Loop through each button
+      buttons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          // If not the last section → scroll to the next section
+          if (index + 1 < sections.length) {
+            sections[index + 1].scrollIntoView({
+              behavior: "smooth",
+            });
+          } else {
+            // If it's the last section → scroll back to the first
+            sections[0].scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    });
+  </script>
 </html>
